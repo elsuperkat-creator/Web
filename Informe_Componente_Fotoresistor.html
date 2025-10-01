@@ -21,7 +21,7 @@
         }
         .integrantes-texto {
             margin-top: 40px;
-            line-height: 1.5; /* Espacio entre las líneas de los nombres */
+            line-height: 1.5;
         }
         .informe {
             margin-top: 20px;
@@ -42,6 +42,18 @@
         .texto ul {
             text-align: left;
             margin-left: 20px;
+        }
+        .codigo {
+            text-align: left;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: "Courier New", Courier, monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            white-space: pre-wrap; /* Permite que el texto se ajuste al ancho del contenedor */
+            word-wrap: break-word; /* Permite que las palabras largas se dividan y ajusten al contenedor */
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -143,6 +155,39 @@
             <li>-Un pulsador</li>
             <li>-2 arduinos</li>
             <li>-Auto de juguete </li>
+    </p>
+    <h5>
+        Codigo Arduino
+    </h5>
+    <p class="codigo">
+        const int FR_PIN[] = {A0, A1, A2, A3, A4, A5};
+        const int LV_PIN[] = {2, 4, 6, 8, 10, 12};
+        const int LR_PIN[] = {3, 5, 7, 9, 11, 13};
+        const int UMBRAL = 500;
+        const int N = 6;
+
+        void setup()
+        {
+            for (int i = 0; i < N; i++)
+            {
+                pinMode(LV_PIN[i], OUTPUT);
+                pinMode(LR_PIN[i], OUTPUT);
+            }
+        }
+        void loop()
+        {
+            int vLuz = analogRead(FR_PIN[i]);
+            if (vLuz > UMBRAL)
+            {
+                digitalWrite(LV_PIN[i], HIGH);
+                digitalWrite(LR_PIN[i], LOW);
+            } else {
+                digitalWrite(LV_PIN[i], LOW);
+                digitalWrite(LR_PIN[i], HIGH);
+            }
+
+        }
+        delay(100);
     </p>
 
 </body>
