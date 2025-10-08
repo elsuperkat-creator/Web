@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe - Practicas Profesionalizantes</title>
     <style>
-        /* Estilos CSS para centrar el contenido y dar un poco de espacio */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -51,9 +50,24 @@
             font-family: "Courier New", Courier, monospace;
             overflow-x: auto;
             margin: 20px 0;
-            white-space: pre-wrap; /* Permite que el texto se ajuste al ancho del contenedor */
-            word-wrap: break-word; /* Permite que las palabras largas se dividan y ajusten al contenedor */
-            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            word-wrap: break-word; 
+        }
+        .bt-copiar {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #0076fd;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px #999;
+            margin-top: 10px;
+
         }
     </style>
 </head>
@@ -188,7 +202,9 @@
 
         }
         delay(100);
+        <button class="bt-copiar" onclick="copiarCodigo()"><span>&#128203; Copiar</span></button>
     </p>
+
 
 </body>
 </html>

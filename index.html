@@ -1,68 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apruebeme pls</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H.W.I Proyectos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0 auto;
-            max-width: 800px;
-            padding: 20px;
-            text-align: center;
-        }
-        h1, h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-position: inside;
-            padding-left: 0;
-            margin: 20px auto;
-            text-align: left;
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            line-height: 1.5;
-        }
-        .texto {
-            margin-left: 8px;
-            text-align: justify;
-        }
-    </style>
-</head>
-<body>
+      :root {
+        --color-primario: #b100d599;
+        --color-fondo-oscuro: #2e2e2e;
+      }
 
-    <h1>Apruebeme pls 2.0</h1>
-    <img src="Imagenes/Immanuel_Kant_-_Gemaelde_1.jpg" alt="Immanuel_Kant">
-    
-    <h2>Tareas:</h2>
-    <p>Nunca hago nada ¿qué esperaban ver?</p>
-    
-    <h2>¿Por qué hice esta página web?</h2>
-    <ul>
-        <li>Precaución</li>
-        <li>Para subir o mantener la nota</li>
-        <li>Relleno...</li>
-    </ul>
-    <ul class="texto">
-        <a href="pag2.html">Documentos</a>
-        <a href="LegionC++.html">Proyectos  </a>
-    </ul>
-</body>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 60px;
+        text-align: left;
+        min-height: 100vh;
+        color: white;
+
+        background-image: linear-gradient(
+            to top,
+            var(--color-primario),
+            var(--color-primario)
+          ),
+          url("imagenes/drag.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+
+      header {
+        background-color: var(--color-fondo-oscuro);
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 100;
+      }
+
+      h1 {
+        color: white;
+        font-size: 1.5em;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: normal;
+      }
+
+      .contenido {
+        background-color: rgba(51, 0, 152, 0.6);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .copy {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.8em;
+        color: #ccc;
+      }
+
+      a {
+        color: rgb(4, 255, 71);
+        text-decoration: none;
+
+        }
+      .menu_izquierda {
+        position: ;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: var(--color-fondo-oscuro);
+        padding: 10px;
+        border-radius: 0 5px 5px 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ThePica &spades; </h1>
+      <div class="nav-links">
+        <a href="#">Proyectos</a>
+        <a href="#">Coming soon</a>
+      </div>
+    </header>
+    <div>
+      <p class="contenido">
+        Proyecto P.P
+        <a href="pag2.html" target="_blank"> Fotorresistos </a>
+      </p>
+      <p class="contenido">
+        Proyecto Factura
+        <a href="factura.html" target="_blank"> Ver Factura </a>
+      </p>
+    </div>
+
+    <p class="copy">Todos los derechos reservados. &copy;</p>
+  </body>
 </html>
